@@ -2,7 +2,7 @@
 Калькулятор времени.
 """
 from datetime import timedelta as td
-import city_database as cd
+from Time_Calc.Resources import city_database as cd
 
 
 def time_calc(hours, minutes, city='SVO', svo=3):

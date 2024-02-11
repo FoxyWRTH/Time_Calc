@@ -2,8 +2,7 @@
 Калькулятор времени.
 """
 from datetime import timedelta as td
-import EDUCATION.Time_Calc.city_database as cd
-import EDUCATION.Time_Calc.decorators as decor
+from Time_Calc.Resources import city_database as cd, decorators as decor
 
 
 def calc_difference_between_utc_and_telegram_time(time, city='SVO', svo=3):
