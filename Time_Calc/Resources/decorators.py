@@ -36,3 +36,7 @@ def decorator_minus_36_hours(time_calc_func):
         return result
 
     return wrapper()
+
+
+if __name__ == '__main__':
+    pass
