@@ -35,8 +35,11 @@ def telegram_time_calc(hours, minutes, city='SVO'):
 
 if __name__ == '__main__':
     try:
+        print('-' * 15)
         print(f'Cтавь TL: {time_calc(0, 0, "KGD")}')
         print('-' * 15)
         print(f'Локальное время вылета: {telegram_time_calc(0, 0, 'KGD')}')
+        print('-' * 15)
+
     except ValueError as error:
         print(error)

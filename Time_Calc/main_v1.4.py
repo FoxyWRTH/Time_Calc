@@ -61,6 +61,6 @@ def func_filter(time, city):
 
 if __name__ == '__main__':
     try:
-        func_filter('1200', 'svo')
+        func_filter('1000', 'svo')
     except TypeError as error:
         print(error)
