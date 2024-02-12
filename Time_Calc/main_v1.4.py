@@ -30,6 +30,7 @@ def calc_difference_between_utc_and_telegram_time(time, city='SVO', svo=3):
     return result_1, result_2
 
 
+@decor.decorator_visual
 def func_filter(time, city):
     """
     Функция подводит общий итог:
@@ -55,11 +56,11 @@ def func_filter(time, city):
     result_02 = decor.decorator_minus_36_hours(  # --------------------------------> 36 Часов.
         calc_difference_between_utc_and_telegram_time(time, city))
     result_03 = calc_difference_between_utc_and_telegram_time(time, city)[1]  # ---> Телеграмма.
-    return f'TL ---> {result_01} | 36 ---> {result_02} | TLG ---> {result_03}'
+    return f'TL ---> {result_01} | 36 ---> {result_02} | TG ---> {result_03}'
 
 
 if __name__ == '__main__':
     try:
-        print(func_filter('1200', 'svo'))
+        func_filter('1200', 'svo')
     except TypeError as error:
         print(error)

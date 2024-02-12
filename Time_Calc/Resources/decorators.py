@@ -38,5 +38,16 @@ def decorator_minus_36_hours(time_calc_func):
     return wrapper()
 
 
+def decorator_visual(funk_filter):
+    def wrapper(*args):
+        func_result = funk_filter(*args)
+        print('-' * len(func_result))
+        print(func_result)
+        print('-' * len(func_result))
+        return func_result
+
+    return wrapper
+
+
 if __name__ == '__main__':
     pass
