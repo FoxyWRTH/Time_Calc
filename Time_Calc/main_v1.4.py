@@ -31,7 +31,7 @@ def calc_difference_between_utc_and_telegram_time(time, city='SVO', svo=3):
 
 
 @decor.decorator_visual
-def func_filter(time, city):
+def result_function(time, city):
     """
     Функция подводит общий итог:
     Время которое нужно установить в TL при пересадке. |
@@ -61,6 +61,6 @@ def func_filter(time, city):
 
 if __name__ == '__main__':
     try:
-        func_filter('1000', 'svo')
+        result_function('2300', 'svo')
     except TypeError as error:
         print(error)
