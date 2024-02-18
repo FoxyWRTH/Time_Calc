@@ -1,5 +1,5 @@
 """
-Декораторы.
+Декораторы. Относятся к версии 1.4
 """
 from datetime import timedelta as td
 
