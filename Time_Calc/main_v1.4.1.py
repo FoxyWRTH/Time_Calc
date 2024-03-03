@@ -3,9 +3,11 @@
 """
 from datetime import timedelta
 from Resources import city_database as data_base
+from Resources import decorators
 
 
-def time_in_moscow_relative_to_local_time(time: str, city='SVO', svo=3):
+@decorators.decorator_debug
+def time_calc_all_in_one(time: str, city='SVO', svo=3):
     """
     Функция считает разницу по UTC между городом который передаётся в функцию и Москвой,
     тем самым получаем время Москвы относительно времени переданного города.
@@ -46,6 +48,6 @@ def time_in_moscow_relative_to_local_time(time: str, city='SVO', svo=3):
 
 if __name__ == '__main__':
     try:
-        print(time_in_moscow_relative_to_local_time('1000', 'del'))
+        print(time_calc_all_in_one('1000', 'del'))
     except TypeError as error:
         print(error)
